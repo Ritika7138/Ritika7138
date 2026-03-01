@@ -170,4 +170,4 @@ footer{
     <p>Phone: +91 7585958688</p>
     <p>Location: India</p>
 </div>
-</footer>html>
+</html>
