@@ -1,144 +1,47 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kumari Ritika Pandey | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-body{
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    text-align:center;
-}
-
-.container{
-    padding:60px 20px;
-}
-
-.profile-img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    border:5px solid #00c6ff;
-    object-fit:cover;
-    margin-bottom:20px;
-}
-
-h1{
-    font-size:36px;
-    font-weight:600;
-}
-
-h2{
-    font-size:20px;
-    font-weight:400;
-    margin:10px 0;
-    color:#00c6ff;
-}
-
-p{
-    max-width:600px;
-    margin:20px auto;
-    line-height:1.6;
-    font-size:15px;
-    opacity:0.9;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 30px;
-    background:#00c6ff;
-    color:black;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:white;
-}
-
-.section{
-    padding:60px 20px;
-}
-
-.section h3{
-    font-size:28px;
-    margin-bottom:20px;
-    color:#00c6ff;
-}
-
-.skills span{
-    display:inline-block;
-    background:rgba(255,255,255,0.1);
-    padding:10px 20px;
-    margin:10px;
-    border-radius:20px;
-    font-size:14px;
-}
-
-footer{
-    padding:20px;
-    font-size:14px;
-    opacity:0.7;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { display: flex; flex-direction: column; max-width: 400px; margin: auto; }
+        label { margin-bottom: 5px; }
+        input, textarea { margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        input[type="submit"] { background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #45a049; }
+    </style>
 </head>
-
 <body>
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-<div class="container">
-    <img src="https://via.placeholder.com/180" class="profile-img" alt="Profile Photo">
-    <h1>Kumari Ritika Pandey</h1>
-    <h2>B.Com Student</h2>
-    <p>
-        Hello! I am a passionate Bachelor of Commerce student with strong interest in
-        finance, accounting, business management and digital skills.
-        I am eager to learn, grow and build a successful professional career.
-    </p>
-    <a href="#" class="btn">Download CV</a>
-</div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-<div class="section">
-    <h3>About Me</h3>
-    <p>
-        I am currently pursuing B.Com and developing my knowledge in commerce,
-        economics, business law and financial management.
-        I am hardworking, disciplined and focused on continuous improvement.
-    </p>
-</div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-<div class="section">
-    <h3>Skills</h3>
-    <div class="skills">
-        <span>Accounting</span>
-        <span>MS Excel</span>
-        <span>Tally</span>
-        <span>Communication</span>
-        <span>Business Management</span>
-    </div>
-</div>
+        <input type="submit" value="Submit">
+    </form>
 
-<div class="section">
-    <h3>Contact</h3>
-    <p>Email: yourname@email.com</p>
-    <p>Phone: +91 XXXXXXXXXX</p>
-</div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
 
-<footer>
-    © 2026 Kumari Ritika Pandey | All Rights Reserved
-</footer>
-
+            if(name && email && message) {
+                alert('Form submitted successfully!');
+                // You can add further processing here (like sending the information to a server)
+            } else {
+                alert('Please fill out all fields!');
+            }
+        });
+    </script>
 </body>
 </html>
